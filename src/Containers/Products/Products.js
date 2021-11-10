@@ -5,6 +5,9 @@ import data from '../../Components/data'
 import classes from './Products.module.css'
 import Modal from '../../Components/Modal/Modal'
 import Pagination from '@material-ui/lab/Pagination'
+import { useDispatch } from 'react-redux'
+import { ADD_TO_CART } from '../../store/actions/actions'
+import * as actions from '../../store/actions/actions'
 
 const Products = () => {
   const [items, setItems] = useState(data.vegetables)
@@ -12,6 +15,7 @@ const Products = () => {
   const [itemsPerPage, setItemsPerPage] = useState(8)
   const [showValue, setShowValue] = useState({})
   const [showModal, setShowModal] = useState(false)
+  const dispatch = useDispatch()
 
   const indexOfLastItem = currentPage * itemsPerPage
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
@@ -25,9 +29,15 @@ const Products = () => {
         price={product.price}
         image={product.image}
         click={() => showData(product)}
+        addCart={() => addToCart(product, 1)}
       />
     )
   })
+
+  const addToCart = (product) => {
+    dispatch(actions.addCart(product))
+    console.log('success')
+  }
 
   const showData = (product) => {
     setShowValue(product)
