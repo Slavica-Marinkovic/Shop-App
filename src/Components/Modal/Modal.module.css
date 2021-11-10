@@ -1,0 +1,89 @@
+.Modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  z-index: 500;
+  background-color: white;
+  width: 50%;
+  height: 60%;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  left: 25%;
+  top: 20%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+.Price {
+  font-size: 1.4rem;
+}
+
+.H3 {
+  font-size: 1.7rem;
+}
+
+/* @media (min-width: 600px) {
+  .Modal {
+  }
+} */
+
+.ProductImg {
+  height: auto;
+  width: 250px;
+}
+
+.ProductImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+  margin-right: 2.5rem;
+}
+
+.Data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 1rem;
+  height: 80%;
+}
+
+.Heading {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.Icon {
+  display: flex;
+  padding: 0 20px;
+  justify-content: flex-end;
+}
+
+.IconText {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 1600px) {
+  .H3 {
+    font-size: 1.7em;
+    margin: 0;
+    padding: 0;
+  }
+  .Price {
+    font-size: 1.6rem;
+  }
+  .Modal {
+    height: 50%;
+    top: 23%;
+  }
+  .ProductImg {
+    width: 300px;
+  }
+}

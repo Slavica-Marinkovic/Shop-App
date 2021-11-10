@@ -1,0 +1,166 @@
+.banner {
+  height: 100vh;
+  background-color: #fff8cd;
+  overflow: hidden;
+  position: relative;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 25px;
+  color: #000000;
+}
+
+.topBar h1 {
+  z-index: 2;
+}
+
+.topBar a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.topBar > div {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  position: relative;
+}
+
+.topBar > div > button {
+  height: 30px;
+  width: 60px;
+  position: absolute;
+  right: 0px;
+  border-radius: 5px;
+}
+
+.topBar > div > input {
+  height: 30px;
+  width: 300px;
+  padding: 0 5px;
+}
+
+.topBar > div > button,
+.topBar > div > input {
+  border: none;
+}
+
+.bannerSvg {
+  height: 70vh;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.slogan {
+  font-size: clamp(0.9rem, 1vw + 1rem, 2.2rem);
+  margin: 0 25px;
+  padding: 10px 20px;
+
+  position: absolute;
+  left: 50px;
+  top: 32vh;
+}
+
+.bannerBtn {
+  height: 10vh;
+  width: auto;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -1px 8px 6px -2px rgba(0, 0, 0, 0.33);
+  background-color: #ff9642;
+  color: #000000;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  padding: 10px 10px;
+}
+
+.bannerBtn:hover {
+  background: #000000;
+  cursor: pointer;
+}
+
+.contentContainer > img {
+  position: absolute;
+  right: 50px;
+  top: 20vh;
+}
+
+.content {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.popularItems,
+.discountedItems {
+  width: 90vw;
+}
+
+.popularItems > h2,
+.discountedItems > h2 {
+  font-family: 'open sans';
+  font-size: 2.5rem;
+  margin-top: 25px;
+}
+
+.itemGrid {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px;
+  position: relative;
+  height: 350px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.itemCard {
+  height: 300px;
+  width: 200px;
+  margin: 10px 10px;
+  border-radius: 7px;
+  background-color: #fff8cd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.productImg {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.productImage {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: 150px;
+  transform: translate(-50%, -50%);
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.productDetails > button {
+  border: none;
+  background-color: #ff9642;
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+  font-size: 10px;
+}

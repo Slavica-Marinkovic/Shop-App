@@ -1,0 +1,90 @@
+.navbarContainer {
+  color: #000000;
+}
+
+/* Navigation Bar Primary */
+
+.navbarPrimary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 25px;
+  position: relative;
+  background-color: #000000;
+}
+
+.navbarPrimary > h1,
+.navbarPrimary a {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color: #ffe05d;
+  text-decoration: none;
+}
+
+.search {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 40px;
+  width: 350px;
+  position: relative;
+}
+
+.AddShoppingCartSharpIcon {
+  position: absolute;
+  color: #ffe05d;
+  left: 5px;
+  top: 4px;
+}
+
+.searchBar {
+  height: 30px;
+  width: 300px;
+  padding: 0 5px;
+  font-family: 'Open Sans';
+}
+
+.searchBtn {
+  height: 30px;
+  width: 60px;
+  position: absolute;
+  right: 0px;
+  border-radius: 5px;
+}
+
+.search input,
+.search button {
+  border: none;
+}
+
+/* Navigation Bar Secondary */
+
+.navbarSecondary {
+  background-color: #ffe05d;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbarLinks {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  padding: 0 25px;
+}
+
+li {
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.cartIconWrapper {
+  width: 34px;
+  height: 30px;
+  position: relative;
+}
+.cartIconWrapper:hover {
+  background-color: rgba(230,230,230,0.3);
+}

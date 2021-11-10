@@ -1,0 +1,19 @@
+.container {
+  height: 100vh;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  margin: 15px 25px;
+  padding: 25px;
+}
+
+details {
+  margin-top: 5rem;
+}
+
+details > p {
+  font-size: 18px;
+}
