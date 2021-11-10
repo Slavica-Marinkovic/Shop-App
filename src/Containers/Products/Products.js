@@ -65,7 +65,6 @@ const Products = () => {
   useEffect(() => {
     itemsNames.map((itemName) => {
       if (itemName.toLowerCase().includes(filterValue)) {
-        // console.log(itemName, 'ODAVDE')
         newItems.push(itemName)
       }
     })
