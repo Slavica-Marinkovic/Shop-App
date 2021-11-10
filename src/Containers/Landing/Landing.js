@@ -2,6 +2,7 @@ import classes from './Landing.module.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import data from '../../Components/data'
+import mainLogoInvert from '../../Assets/main-logo-invert.png'
 import Footer from '../../Components/Footer'
 import GroceryCard from '../../Components/GroceryCard/GroceryCard'
 
@@ -21,9 +22,9 @@ const landing = () => {
           ></path>
         </svg>
         <div className={classes.topBar}>
-          <h1>
-            <Link to="/">LOGO</Link>
-          </h1>
+          <div>
+            <Link to="/"><img src={mainLogoInvert}></img></Link>
+          </div>
 
           <div>
             <input type="text" placeholder="What do you need?" />

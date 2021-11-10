@@ -52,13 +52,7 @@ const Products = () => {
     <div>
       <NavigationBar />
       <div className={classes.Wrapper}>
-        <h2
-          style={{
-            fontSize: '50px',
-            fontWeight: '400',
-            marginBottom: '2rem',
-          }}
-        >
+        <h2>
           Vegetables
         </h2>
         <div className={classes.Top}>
@@ -72,11 +66,11 @@ const Products = () => {
           <div className={classes.Input}>
             Search:{' '}
             <input
-              style={{
+              /*style={{
                 marginLeft: '1rem',
                 height: '25px',
                 border: '1px solid black',
-              }}
+              }}*/
               type="text"
             ></input>
           </div>
