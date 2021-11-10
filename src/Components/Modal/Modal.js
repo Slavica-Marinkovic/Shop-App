@@ -42,7 +42,18 @@ const modal = (props) => {
             </p>
           </div>
           <div className={classes.Icon}>
-            <div className={classes.IconText}>
+            <div
+              className={classes.IconText}
+              onClick={() =>
+                props.addToCart({
+                  name: props.name,
+                  price: props.price,
+                  quantity: props.quantity,
+                  id: props.id,
+                  image: props.image,
+                })
+              }
+            >
               <div>
                 <i
                   style={{ color: '#FF9642', fontSize: '40px' }}

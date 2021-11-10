@@ -36,6 +36,7 @@ const Products = () => {
   })
 
   const addToCart = (product) => {
+    console.log('success')
     dispatch(actions.addCart(product))
   }
 
@@ -134,6 +135,9 @@ const Products = () => {
         name={showValue.name}
         image={showValue.image}
         price={showValue.price}
+        quantity={showValue.quantity}
+        addToCart={addToCart}
+        id={showValue.id}
       ></Modal>
     </div>
   )

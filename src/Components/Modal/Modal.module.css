@@ -65,7 +65,7 @@
 .IconText {
   display: flex;
   flex-direction: column;
-
+  cursor: pointer;
   justify-content: flex-end;
   align-items: center;
 }
