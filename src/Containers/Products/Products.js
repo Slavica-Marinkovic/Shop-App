@@ -15,6 +15,7 @@ const Products = () => {
   const [itemsPerPage, setItemsPerPage] = useState(8)
   const [showValue, setShowValue] = useState({})
   const [showModal, setShowModal] = useState(false)
+  const [filterValue, setFilterValue] = useState('')
   const dispatch = useDispatch()
 
   const indexOfLastItem = currentPage * itemsPerPage
@@ -44,8 +45,6 @@ const Products = () => {
     setShowModal(true)
   }
 
-  console.log(showValue)
-
   const closeModal = () => {
     setShowModal(false)
   }
@@ -56,15 +55,40 @@ const Products = () => {
     pageNumbers.push(i)
   }
 
-  console.log(showModal)
+  let itemsNames = []
+  items.map((item) => {
+    itemsNames.push(item.name)
+  })
+
+  let newItems = []
+
+  useEffect(() => {
+    itemsNames.map((itemName) => {
+      if (itemName.toLowerCase().includes(filterValue)) {
+        // console.log(itemName, 'ODAVDE')
+        newItems.push(itemName)
+      }
+    })
+
+    if (filterValue.length === 0) {
+      setItems(data.vegetables)
+      return
+    }
+
+    if (newItems.length === 0 && items.length < 9) {
+      setItems([])
+      return
+    }
+
+    const result = items.filter((item) => newItems.includes(item.name))
+    setItems(result)
+  }, [filterValue])
 
   return (
     <div>
       <NavigationBar />
       <div className={classes.Wrapper}>
-        <h2>
-          Vegetables
-        </h2>
+        <h2>Vegetables</h2>
         <div className={classes.Top}>
           <div className={classes.Categories}>
             <div>Category 1</div>
@@ -82,6 +106,8 @@ const Products = () => {
                 border: '1px solid black',
               }}*/
               type="text"
+              value={filterValue}
+              onChange={(e) => setFilterValue(e.target.value.toLowerCase())}
             ></input>
           </div>
         </div>
