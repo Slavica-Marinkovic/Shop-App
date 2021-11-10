@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
   padding: 0 25px;
   position: relative;
   background-color: #000000;
@@ -62,17 +61,19 @@
 
 .navbarSecondary {
   background-color: #ffe05d;
-  height: 30px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  padding: 5px 0;
 }
 
 .navbarLinks {
   display: flex;
   justify-content: space-between;
-  width: 25%;
   padding: 0 25px;
+}
+.navbarLinks li{
+  margin: 0 10px;
 }
 
 li {
@@ -87,4 +88,38 @@ li {
 }
 .cartIconWrapper:hover {
   background-color: rgba(230,230,230,0.3);
+}
+
+@media screen and (max-width: 500px) {
+  .navbarPrimary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .searchBar {
+    width: 230px;
+  }
+  .search {
+    width:auto;
+  }
+}
+@media screen and (max-width: 370px) {
+  .navbarLinks {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbarLinks li {
+    margin: 5px;
+  }
+  .navbarSecondary {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 300px) {
+  .searchBar {
+    width: 190px;
+  }
+  .searchBar::-webkit-input-placeholder {
+    color: transparent;
+  }
 }

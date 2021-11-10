@@ -72,4 +72,55 @@
   background-size: cover;
   background-repeat: no-repeat;
   border: 1px solid #000000;
+  min-width: 240px;
+}
+@media screen and (max-width: 1200px) {
+  .img1 {
+    top: 22%;
+  }
+  .img2 {
+    top: 47%;
+  }
+  .text p {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 900px){
+  .text p {
+    font-size: 14px;
+    margin-left: 2rem;
+  }
+  .img {
+    width: 40%;
+  }
+  .text div > h2 {
+    font-size: 5rem;
+    top: 1rem;
+    left: 1rem;
+  }
+  .text h1:first-of-type {
+    margin-left: 1.25rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  .container {
+    flex-direction: column;
+  }
+  .text {
+    width: 90%;
+  }
+  .img {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .text div > h2 {
+    font-size: 3rem;
+  }
+  .text div > h1 {
+    font-size: 2rem;
+  }
+  .img {
+    display: none;
+  }
 }

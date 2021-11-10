@@ -1,15 +1,17 @@
 .banner {
   height: 100vh;
+  min-height: 400px;
   background-color: #fff8cd;
   overflow: hidden;
   position: relative;
+  padding-top: 10px;
 }
 
 .topBar {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 25px;
+  padding: 14px 25px;
   color: #000000;
 }
 
@@ -34,7 +36,7 @@
   width: 60px;
   position: absolute;
   right: 0px;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
 }
 
 .topBar > div > input {
@@ -46,10 +48,12 @@
 .topBar > div > button,
 .topBar > div > input {
   border: none;
+  outline: none;
+  border-radius: 5px;
 }
 
 .bannerSvg {
-  height: 70vh;
+  min-height: 70vh;
   position: absolute;
   top: 0%;
   left: 0%;
@@ -57,16 +61,15 @@
 
 .slogan {
   font-size: clamp(0.9rem, 1vw + 1rem, 2.2rem);
-  margin: 0 25px;
+  margin: 50px 25px;
   padding: 10px 20px;
-
   position: absolute;
   left: 50px;
-  top: 32vh;
+  top: 28vh;
+  color: rgba(50,50,50,0.9);
 }
 
 .bannerBtn {
-  height: 10vh;
   width: auto;
   border: none;
   border-radius: 5px;
@@ -74,11 +77,13 @@
   background-color: #ff9642;
   color: #000000;
   font-size: clamp(1rem, 2.5vw, 2rem);
-  padding: 10px 10px;
+  padding: 10px 15px;
+  margin-top: 15px;
 }
 
 .bannerBtn:hover {
-  background: #000000;
+  background: rgba(50,50,50,0.9);
+  color: #ff9642;
   cursor: pointer;
 }
 
@@ -163,4 +168,29 @@
   width: 70px;
   height: 30px;
   font-size: 10px;
+}
+
+@media screen and (max-width: 460px) {
+  .topBar {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-start;
+  }
+  .slogan {
+    left: 0;
+    margin-top: 20px;
+  }
+  .popularItems > h2,
+  .discountedItems > h2 {
+  font-size: 1.5rem;
+  margin-top: 16px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .topBar div input {
+    width: 80vw;
+  }
+  .slogan {
+    margin-top: 0;
+  }
 }

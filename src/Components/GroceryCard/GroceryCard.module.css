@@ -1,6 +1,7 @@
 .ItemCard {
   height: 300px;
-  width: 200px;
+  width: 22%;
+  min-width: 175px;
   margin: 10px 10px;
   border-radius: 7px;
   background-color: #fff8cd;
@@ -43,4 +44,20 @@
   width: 70px;
   height: 30px;
   font-size: 10px;
+}
+
+@media screen and (max-width: 980px) {
+  .ItemCard {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .ItemCard {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ItemCard {
+    width: 90%;
+  }
 }

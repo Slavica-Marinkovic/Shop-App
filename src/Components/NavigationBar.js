@@ -1,15 +1,16 @@
 import React from 'react'
 import classes from './Styles/navigationbar.module.css'
 import AddShoppingCartSharpIcon from '@material-ui/icons/AddShoppingCartSharp'
+import mainLogo from '../Assets/main-logo.png'
 import { Link } from 'react-router-dom'
 
 function NavigationBar() {
   return (
     <div className={classes.navbarContainer}>
       <div className={classes.navbarPrimary}>
-        <h1 id="logo">
-          <Link to="/">logo</Link>
-        </h1>
+        <div id="logo">
+          <Link to="/"><img src={mainLogo}></img></Link>
+        </div>
         <div className={classes.search}>
           <Link to="/cart">
             <div className={classes.cartIconWrapper}>

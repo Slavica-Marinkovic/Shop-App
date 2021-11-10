@@ -16,7 +16,7 @@ function Footer() {
         <div className={classes.customerCare}>
           <h3>Customer Care</h3>
           <ul>
-            <li><Link to="/faqs" className={classes.footerLinks}>FAQs</Link></li>
+            <li><Link className="mr-auto" to="/faqs" className={classes.footerLinks}>FAQs</Link></li>
             <li><Link to="/terms-and-conditions" className={classes.footerLinks}>Terms and Conditions</Link></li>
             <li><Link to="/delivery-areas" className={classes.footerLinks}>Delivery Areas</Link></li>
           </ul>
@@ -24,9 +24,9 @@ function Footer() {
         <div className={classes.follow}>
           <h3>Follow Us</h3>
           <ul>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
           </ul>
         </div>
       </div>
