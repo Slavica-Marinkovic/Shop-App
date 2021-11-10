@@ -37,7 +37,6 @@ const Products = () => {
 
   const addToCart = (product) => {
     dispatch(actions.addCart(product))
-    console.log('success')
   }
 
   const showData = (product) => {
@@ -86,6 +85,7 @@ const Products = () => {
   return (
     <div>
       <NavigationBar />
+
       <div className={classes.Wrapper}>
         <h2>Vegetables</h2>
         <div className={classes.Top}>

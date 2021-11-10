@@ -9,13 +9,15 @@ import FAQs from './Containers/FAQs/FAQs'
 import Cart from './Containers/Cart/Cart'
 import { Provider } from 'react-redux'
 import { store } from './store/store'
+import ItemPage from './Containers/ItemPage/ItemPage'
 const App = () => {
   return (
     <Provider store={store}>
       <div>
         <Switch>
           <Route path="/" exact component={Landing} />
-          <Route path="/products" component={Products} />
+          <Route path="/products" exact component={Products} />
+          <Route path="/products/:product_id" component={ItemPage} />
           <Route path="/about-us" component={About} />
           <Route path="/careers" component={Careers} />
           <Route path="/faqs" component={FAQs} />
