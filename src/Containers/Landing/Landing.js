@@ -27,11 +27,6 @@ const landing = () => {
               <img src={mainLogoInvert}></img>
             </Link>
           </div>
-
-          {/* <div>
-            <input type="text" placeholder="What do you need?" />
-            <button type="submit">Search</button>
-          </div> */}
         </div>
         <div className={classes.slogan}>
           <h1>
@@ -47,19 +42,6 @@ const landing = () => {
         </div>
       </div>
       <div className={classes.content}>
-        {/* <div className={classes.popularItems}>
-          <h2>Popular Products</h2>
-          <div className={classes.itemGrid}>
-            {data.vegetables.map((product) => (
-              <GroceryCard
-                key={Math.random()}
-                name={product.name}
-                price={product.price}
-                image={product.image}
-              />
-            ))}
-          </div>
-        </div> */}
         <div className={classes.popularItems}>
           <h2>Discounted Products</h2>
           <div className={classes.itemGrid}>
