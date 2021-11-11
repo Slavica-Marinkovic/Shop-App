@@ -31,21 +31,23 @@ function Cart() {
               </div>
               <div>{cartItem.name}</div>
               <div>{cartItem.price}</div>
-              <div>{cartItem.quantity}</div>
+              <div 
+              style={{display: 'flex', columnGap: '5px', alignItems: 'center'}}
+              >
               <button
+                style={{padding: '5px 7px'}}
                 onClick={() => {
                   dispatch(actions.addQuantity(index))
                 }}
-              >
-                DODAJ JOS
-              </button>
+              >+</button>
+              <div>{cartItem.quantity}</div>
               <button
+                style={{padding: '5px 7px'}}
                 onClick={() => {
                   dispatch(actions.subQuantity(index))
                 }}
-              >
-                SMANJI
-              </button>
+              >-</button>
+              </div>
             </div>
           )
         })}
