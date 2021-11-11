@@ -16,6 +16,7 @@ export default (state = initialState, action) => {
         state.cart.find((e) => {
           if (e.id === action.product.id) {
             e.quantity += 1
+            e.price = e.oldPrice * e.quantity
           }
         })
         return { ...state }
@@ -27,6 +28,8 @@ export default (state = initialState, action) => {
       }
     case CHANGE_QUANTITY:
       state.cart[action.index].quantity += 1
+      state.cart[action.index].price =
+        state.cart[action.index].oldPrice * state.cart[action.index].quantity
       return {
         ...state,
         cart: [...state.cart],
@@ -34,6 +37,8 @@ export default (state = initialState, action) => {
     case SUBTRACT_QUANTITY:
       if (state.cart[action.index].quantity > 1) {
         state.cart[action.index].quantity -= 1
+        state.cart[action.index].price =
+          state.cart[action.index].price - state.cart[action.index].oldPrice
       } else if (state.cart[action.index].quantity === 1) {
         state.cart[action.index].quantity -= 1
         return { ...state, cart: state.cart.filter((e) => e.quantity !== 0) }

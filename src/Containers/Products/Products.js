@@ -100,11 +100,6 @@ const Products = () => {
           <div className={classes.Input}>
             Search:{' '}
             <input
-              /*style={{
-                marginLeft: '1rem',
-                height: '25px',
-                border: '1px solid black',
-              }}*/
               type="text"
               value={filterValue}
               onChange={(e) => setFilterValue(e.target.value.toLowerCase())}
@@ -116,7 +111,7 @@ const Products = () => {
           style={{
             display: 'flex',
             justifyContent: 'flex-end',
-            width: '100%',
+            width: '90%',
             marginTop: '1rem',
           }}
         >

@@ -14,9 +14,11 @@ const GroceryCard = (props) => {
       <div className={classes.ProductDetails}>
         <div>
           <p>{props.name}</p>
-          <p>{props.price}</p>
+          <p>{props.price}$</p>
         </div>
-        <button onClick={props.addCart}>Add to cart</button>
+        <button style={{ cursor: 'pointer' }} onClick={props.addCart}>
+          Add to cart
+        </button>
       </div>
     </div>
   )

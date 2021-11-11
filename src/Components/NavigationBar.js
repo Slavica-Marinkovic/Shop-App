@@ -4,14 +4,26 @@ import AddShoppingCartSharpIcon from '@material-ui/icons/AddShoppingCartSharp'
 import mainLogo from '../Assets/main-logo.png'
 import { Link } from 'react-router-dom'
 import { Redirect } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 function NavigationBar(props) {
   const [inputVal, setInputVal] = useState('')
   const [shouldNavigate, setShouldNavigate] = useState(false)
+  const [display, setDisplay] = useState('none')
+
+  const cart = useSelector((state) => state.cart.cart)
 
   useEffect(() => {
     setShouldNavigate(false)
   }, [shouldNavigate])
+
+  useEffect(() => {
+    if (cart.length > 0) {
+      setDisplay('block')
+    } else if (cart.length === 0) {
+      setDisplay('none')
+    }
+  }, [cart])
 
   if (shouldNavigate) {
     return <Redirect to={`/products/${inputVal}`} />
@@ -30,6 +42,10 @@ function NavigationBar(props) {
               <AddShoppingCartSharpIcon
                 className={classes.AddShoppingCartSharpIcon}
               />
+              <div
+                className={classes.circle}
+                style={{ display: display }}
+              ></div>
             </div>
           </Link>
           <form

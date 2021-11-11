@@ -3,7 +3,6 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .Wrapper {
@@ -21,7 +20,7 @@
 
 .Top {
   display: flex;
-  width: 100%;
+  width: 90%;
   justify-content: center;
   align-items: center;
   padding: 0 10px 3rem 10px;

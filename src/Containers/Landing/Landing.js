@@ -23,13 +23,15 @@ const landing = () => {
         </svg>
         <div className={classes.topBar}>
           <div>
-            <Link to="/"><img src={mainLogoInvert}></img></Link>
+            <Link to="/">
+              <img src={mainLogoInvert}></img>
+            </Link>
           </div>
 
-          <div>
+          {/* <div>
             <input type="text" placeholder="What do you need?" />
             <button type="submit">Search</button>
-          </div>
+          </div> */}
         </div>
         <div className={classes.slogan}>
           <h1>
@@ -45,7 +47,7 @@ const landing = () => {
         </div>
       </div>
       <div className={classes.content}>
-        <div className={classes.popularItems}>
+        {/* <div className={classes.popularItems}>
           <h2>Popular Products</h2>
           <div className={classes.itemGrid}>
             {data.vegetables.map((product) => (
@@ -55,6 +57,35 @@ const landing = () => {
                 price={product.price}
                 image={product.image}
               />
+            ))}
+          </div>
+        </div> */}
+        <div className={classes.popularItems}>
+          <h2>Discounted Products</h2>
+          <div className={classes.itemGrid}>
+            {data.vegetables.map((product) => (
+              <div className={classes.itemCard}>
+                <div className={classes.productImg}>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className={classes.productImage}
+                  />
+                </div>
+                <div className={classes.productDetails}>
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      flexDirection: 'column',
+                    }}
+                  >
+                    <p>{product.name}</p>
+                    <p>{product.price}$</p>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -71,11 +102,17 @@ const landing = () => {
                   />
                 </div>
                 <div className={classes.productDetails}>
-                  <div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      flexDirection: 'column',
+                    }}
+                  >
                     <p>{product.name}</p>
-                    <p>{product.price}</p>
+                    <p>{product.price}$</p>
                   </div>
-                  <button>Add to cart</button>
                 </div>
               </div>
             ))}
