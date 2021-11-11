@@ -6,6 +6,7 @@ import mainLogoInvert from '../../Assets/main-logo-invert.png'
 import Footer from '../../Components/Footer'
 import GroceryCard from '../../Components/GroceryCard/GroceryCard'
 
+/*vercel*/
 const landing = () => {
   return (
     <>
