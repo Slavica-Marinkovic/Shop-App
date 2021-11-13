@@ -1,0 +1,34 @@
+.mainDiv {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 1rem;
+  flex: 2;
+  margin-left: 3rem;
+}
+
+.Wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.clearCart {
+  width: 100px;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ffe05d;
+  margin-right: '2rem';
+  transition: opacity 0.25s;
+}
+
+.clearCart:hover {
+  opacity: 0.8;
+}
+
+.quantityButton:hover {
+  opacity: 0.8;
+}

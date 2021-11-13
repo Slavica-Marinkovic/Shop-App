@@ -1,0 +1,142 @@
+.navbarContainer {
+  color: #000000;
+}
+
+/* Navigation Bar Primary */
+
+.navbarPrimary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  position: relative;
+  background-color: #000000;
+}
+
+.navbarPrimary > h1,
+.navbarPrimary a {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  color: #ffe05d;
+  text-decoration: none;
+}
+
+.search {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 40px;
+  width: 350px;
+  position: relative;
+}
+
+.AddShoppingCartSharpIcon {
+  position: absolute;
+  color: #ffe05d;
+  left: 5px;
+  top: 4px;
+}
+
+.searchBar {
+  height: 30px;
+  width: 300px;
+  padding: 0 5px;
+  font-family: 'Open Sans';
+}
+
+.searchBtn {
+  height: 30px;
+  width: 60px;
+  position: absolute;
+  right: 0px;
+  border-radius: 5px;
+}
+
+.search input,
+.search button {
+  border: none;
+}
+
+/* Navigation Bar Secondary */
+
+.navbarSecondary {
+  background-color: #ffe05d;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.navbarLinks {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+.navbarLinks li {
+  margin: 0 10px;
+}
+
+li {
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.cartIconWrapper {
+  width: 34px;
+  height: 30px;
+  position: relative;
+  margin-right: 0.6rem;
+  transition: background-color 0.25s;
+  border-radius: 5px;
+}
+.cartIconWrapper:hover {
+  background-color: rgba(230, 230, 230, 0.3);
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  background-color: #77d970;
+  z-index: 100;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 80%;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .navbarPrimary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .searchBar {
+    width: 230px;
+  }
+  .search {
+    width: auto;
+  }
+}
+@media screen and (max-width: 370px) {
+  .navbarLinks {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navbarLinks li {
+    margin: 5px;
+  }
+  .navbarSecondary {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 300px) {
+  .searchBar {
+    width: 190px;
+  }
+  .searchBar::-webkit-input-placeholder {
+    color: transparent;
+  }
+}

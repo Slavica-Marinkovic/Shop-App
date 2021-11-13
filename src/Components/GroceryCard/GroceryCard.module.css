@@ -1,0 +1,63 @@
+.ItemCard {
+  height: 300px;
+  width: 22%;
+  min-width: 175px;
+  margin: 10px 10px;
+  border-radius: 7px;
+  background-color: #fff8cd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.ProductImg {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+.ProductImage {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: 150px;
+  transform: translate(-50%, -50%);
+}
+
+.ProductDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.ProductDetails > button {
+  border: none;
+  background-color: #ff9642;
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 980px) {
+  .ItemCard {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .ItemCard {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ItemCard {
+    width: 90%;
+  }
+}
